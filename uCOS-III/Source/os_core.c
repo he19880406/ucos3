@@ -5,6 +5,7 @@
 *
 *                                  (c) Copyright 2009-2011; Micrium, Inc.; Weston, FL
 *                           All rights reserved.  Protected by international copyright laws.
+*   
 *
 *                                                    CORE FUNCTIONS
 *
