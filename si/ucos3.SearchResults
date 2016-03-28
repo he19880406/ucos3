@@ -1,0 +1,50 @@
+---- OS_CPU_USAGE Matches (11 in 7 files) ----
+Os.h (d:\ucos-iii\...\source):951
+    OS_CPU_USAGE         CPUUsage;                          /* CPU Usage of task (0-100%)                             */
+    OS_CTX_SW_CTR        CtxSwCtr;                          /* Number of time the task was switched in                */
+    CPU_TS               CyclesDelta;                       /* value of OS_TS_GET() - .CyclesStart                    */
+Os.h (d:\ucos-iii\...\source):1144
+OS_EXT            OS_CPU_USAGE           OSStatTaskCPUUsage;          /* CPU Usage in %                               */
+OS_EXT            OS_TICK                OSStatTaskCtr;
+OS_EXT            OS_TICK                OSStatTaskCtrMax;
+Os_stat.c (d:\ucos-iii\...\source):120
+        p_tcb->CPUUsage         = (OS_CPU_USAGE)0;
+        p_tcb->CyclesTotal      = (OS_CYCLES   )0;
+        p_tcb->CyclesTotalPrev  = (OS_CYCLES   )0;
+Os_stat.c (d:\ucos-iii\...\source):254
+    OS_CPU_USAGE usage;
+    OS_CYCLES    cycles_total;
+#endif
+Os_stat.c (d:\ucos-iii\...\source):296
+                OSStatTaskCPUUsage = (OS_CPU_USAGE)((OS_TICK)100u - 100u * OSStatTaskCtrRun / OSStatTaskCtrMax);
+            } else {
+                OSStatTaskCPUUsage = (OS_CPU_USAGE)100;
+            }
+        } else {
+            OSStatTaskCPUUsage = (OS_CPU_USAGE)100;
+        }
+
+Os_stat.c (d:\ucos-iii\...\source):332
+                usage = (OS_CPU_USAGE)(p_tcb->CyclesTotalPrev / cycles_total);
+                if (usage > 100u) {
+                    usage = 100u;
+Os_task.c (d:\ucos-iii\...\source):1985
+    p_tcb->CPUUsage           = (OS_CPU_USAGE   )0u;
+    p_tcb->CtxSwCtr           = (OS_CTX_SW_CTR  )0u;
+    p_tcb->CyclesDelta        = (CPU_TS         )0u;
+Os_type.h (d:\ucos-iii\...\ucos-iii-ex1):41
+typedef   CPU_INT08U      OS_CPU_USAGE;                /* CPU Usage 0..100%                                 <8>/16/32 */
+
+typedef   CPU_INT32U      OS_CTR;                      /* Counter,                                                 32 */
+Os_type.h (d:\ucos-iii\...\ucos-iii-ex2):41
+typedef   CPU_INT08U      OS_CPU_USAGE;                /* CPU Usage 0..100%                                 <8>/16/32 */
+
+typedef   CPU_INT32U      OS_CTR;                      /* Counter,                                                 32 */
+Os_type.h (d:\ucos-iii\...\ucos-iii-ex3):41
+typedef   CPU_INT08U      OS_CPU_USAGE;                /* CPU Usage 0..100%                                 <8>/16/32 */
+
+typedef   CPU_INT32U      OS_CTR;                      /* Counter,                                                 32 */
+Os_type.h (d:\ucos-iii\...\ucos-iii-ex4):41
+typedef   CPU_INT08U      OS_CPU_USAGE;                /* CPU Usage 0..100%                                 <8>/16/32 */
+
+typedef   CPU_INT32U      OS_CTR;                      /* Counter,                                                 32 */
